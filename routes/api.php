@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
-use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/welcome', [WelcomeController::class, 'index']);
-Route::post('/products/get-all', [ProductsController::class, 'getAll']);
+Route::post('/products/get-all', [ProductController::class, 'getAll']);
 
