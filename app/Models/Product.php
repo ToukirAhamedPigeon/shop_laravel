@@ -9,5 +9,5 @@ class Product extends Model
 {
     use HasFactory;
     protected $connection = 'pgsql';
-    protected $table = 'Products';
+    protected $table = 'products';
 }

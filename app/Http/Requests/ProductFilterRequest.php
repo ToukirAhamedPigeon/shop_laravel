@@ -9,7 +9,7 @@ class ProductFilterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'Name' => 'nullable|string',
+            'name' => 'nullable|string',
             'minPrice' => 'nullable|numeric|min:0',
             'maxPrice' => 'nullable|numeric|min:0',
         ];

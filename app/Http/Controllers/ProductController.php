@@ -6,7 +6,7 @@ use App\Http\DTOs\ProductFilterDto;
 use App\Http\Services\ProductService;
 use App\Http\Requests\ProductFilterRequest;
 
-class ProductsController extends Controller
+class ProductController extends Controller
 {
     public function __construct(
         protected ProductService $productService

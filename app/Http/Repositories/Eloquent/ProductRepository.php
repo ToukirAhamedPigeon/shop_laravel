@@ -10,9 +10,9 @@ class ProductRepository implements ProductRepositoryInterface
     public function getAll(ProductFilterDto $filter)
     {
         return Product::
-            when($filter->Name, fn($q) => $q->where('Name', 'ILIKE', "%{$filter->Name}%"))
-            ->when($filter->minPrice, fn($q) => $q->where('Price', '>=', $filter->minPrice))
-            ->when($filter->maxPrice, fn($q) => $q->where('Price', '<=', $filter->maxPrice))
+            when($filter->name, fn($q) => $q->where('name', 'ILIKE', "%{$filter->name}%"))
+            ->when($filter->minPrice, fn($q) => $q->where('price', '>=', $filter->minPrice))
+            ->when($filter->maxPrice, fn($q) => $q->where('price', '<=', $filter->maxPrice))
             ->get();
     }
 }

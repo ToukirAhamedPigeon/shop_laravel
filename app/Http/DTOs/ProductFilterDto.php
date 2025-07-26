@@ -8,7 +8,7 @@ use App\Http\Requests\ProductFilterRequest;
 class ProductFilterDto
 {
     public function __construct(
-        public ?string $Name,
+        public ?string $name,
         public ?float $minPrice,
         public ?float $maxPrice
     ) {}
@@ -17,7 +17,7 @@ class ProductFilterDto
     {
         $data = $request->validated();
         return new self(
-            $data['Name'] ?? null,
+            $data['name'] ?? null,
             isset($data['minPrice']) ? (float) $data['minPrice'] : null,
             isset($data['maxPrice']) ? (float) $data['maxPrice'] : null,
         );
